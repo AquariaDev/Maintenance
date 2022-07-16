@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'idea'
+}
+
+group 'fr.aquaria.bungee'
+version '1.0-SNAPSHOT'
+
+archivesBaseName = 'Maintenance'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' } // This lets gradle find the BungeeCord files online
+}
+
+dependencies {
+    compileOnly 'net.md-5:bungeecord-api:1.19-R0.1-SNAPSHOT'
+}
